@@ -12,3 +12,9 @@ JOB_TITLES_JSON=$(printf '%b\n' $JOB_TITLES | sed -e 's/\(.*\)/    "\1",/' | sed
 JOB_TITLES_JSON="{\n  \"job-titles\": [\n${JOB_TITLES_JSON}\n  ]\n}"
 printf '%b\n' "$JOB_TITLES_JSON" > $JOB_TITLES_JSON_FILE
 
+echo "Updating readme item counter"
+README=readme.md
+JOB_TITLES_LENGTH=$(echo "$JOB_TITLES" | wc -l)
+README_CONTENT=$(cat $README | sed -e "s|/job_titles-[0-9]\+-|/job_titles-$JOB_TITLES_LENGTH-|g")
+printf '%b\n' "$README_CONTENT" > $README
+
