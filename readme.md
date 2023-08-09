@@ -17,6 +17,11 @@ The data is normalized in the following ways:
 - Duplicates such as `a and p mechanic` and `a&p mechanic`
 - Non-English titles such as `ab initio etl developer`
 
+## See also
+
+- [animal names](https://github.com/jneidel/animal-names)
+- [nationalities](https://github.com/jneidel/nationalities)
+
 ## Contribute
 
 Feel free to open a pull request fixing above listed caveats or any other enhancements.
